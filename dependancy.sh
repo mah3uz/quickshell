@@ -1,0 +1,1 @@
+yay -S caelestia-cli quickshell-git ddcutil brightnessctl app2unit cava networkmanager lm-sensors fish aubio libpipewire glibc qt6-declarative gcc-libs material-symbols jetbrains-mono-nerd grim swappy libqalculate
