@@ -24,7 +24,7 @@
     },
     "launcher": {
         "actionPrefix": ">",
-        "enableDangerousActions": false,
+        "enableDangerousActions": true,
         "maxShown": 8,
         "maxWallpapers": 9
     },

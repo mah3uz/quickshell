@@ -26,4 +26,3 @@ while true; do
 	
 	echo " $(humanize_bytes "$TBPS"): $(humanize_bytes "$RBPS")"
 done
-
