@@ -1,5 +1,24 @@
 {
+    "general": {
+        "apps": {
+            "terminal": ["kitty"],
+            "audio": ["pavucontrol"]
+        }
+    },
+    "background": {
+        "enabled": true
+    },
     "bar": {
+        "dragThreshold": 20,
+        "persistent": true,
+        "showOnHover": true,
+        "status": {
+            "showAudio": false,
+            "showBattery": true,
+            "showBluetooth": true,
+            "showKbLayout": false,
+            "showNetwork": true
+        },
         "workspaces": {
             "activeIndicator": true,
             "activeLabel": "󰮯 ",
@@ -17,16 +36,26 @@
         "thickness": 10
     },
     "dashboard": {
+        "enabled": true,
+        "dragThreshold": 50,
         "mediaUpdateInterval": 500,
-        "visualiserBars": 45,
-        "weatherLocation": "23.7104,90.4074",
-        "useFahrenheit": false
+        "showOnHover": true,
+        "visualiserBars": 45
     },
     "launcher": {
         "actionPrefix": ">",
+        "dragThreshold": 50,
+        "vimKeybinds": false,
         "enableDangerousActions": true,
         "maxShown": 8,
-        "maxWallpapers": 9
+        "maxWallpapers": 9,
+        "useFuzzy": {
+            "apps": true,
+            "actions": false,
+            "schemes": false,
+            "variants": false,
+            "wallpapers": false
+        }
     },
     "lock": {
         "maxNotifs": 5
@@ -46,7 +75,20 @@
         "sessionGif": "root:/assets/kurukuru.gif",
         "wallpaperDir": "~/Pictures/Wallpapers"
     },
+    "services": {
+        "audioIncrement": 0.1,
+        "weatherLocation": "22.7892547,89.6103488",
+        "useFahrenheit": false,
+        "useTwelveHourClock": true
+    },
     "session": {
-        "dragThreshold": 30
+        "dragThreshold": 30,
+        "vimKeybinds": false,
+        "commands": {
+            "logout": ["loginctl", "terminate-user", ""],
+            "shutdown": ["systemctl", "poweroff"],
+            "hibernate": ["systemctl", "hibernate"],
+            "reboot": ["systemctl", "reboot"]
+        }
     }
 }
