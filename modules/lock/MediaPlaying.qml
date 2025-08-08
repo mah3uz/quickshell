@@ -5,7 +5,6 @@ import qs.config
 import Quickshell.Widgets
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls
 
 RowLayout {
     id: root
@@ -48,7 +47,7 @@ RowLayout {
         ClippingWrapperRectangle {
             anchors.fill: parent
 
-            color: Colours.palette.m3surfaceContainerHigh
+            color: Colours.tPalette.m3surfaceContainerHigh
             radius: Appearance.rounding.small
             rotation: 9
 
@@ -92,7 +91,7 @@ RowLayout {
         StyledClippingRect {
             anchors.fill: parent
 
-            color: Colours.palette.m3surfaceContainerHigh
+            color: Colours.tPalette.m3surfaceContainerHigh
             radius: Appearance.rounding.small
 
             border.width: Config.lock.sizes.mediaCoverBorder
@@ -229,7 +228,7 @@ RowLayout {
         implicitHeight: implicitWidth
 
         radius: Appearance.rounding.full
-        color: primary && canUse ? Colours.palette.m3primary : "transparent"
+        color: Qt.alpha(Colours.palette.m3primary, primary && canUse ? 1 : 0)
 
         StateLayer {
             disabled: !control.canUse

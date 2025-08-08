@@ -25,7 +25,7 @@ Singleton {
             property alias active: cc.active
             property alias navExpanded: cc.navExpanded
 
-            color: Colours.palette.m3surface
+            color: Colours.tPalette.m3surface
 
             onVisibleChanged: {
                 if (!visible)
@@ -38,6 +38,8 @@ Singleton {
             implicitWidth: cc.implicitWidth
             implicitHeight: cc.implicitHeight
 
+            title: qsTr("Caelestia Settings - %1").arg(cc.active.slice(0, 1).toUpperCase() + cc.active.slice(1))
+
             ControlCenter {
                 id: cc
 
@@ -46,7 +48,7 @@ Singleton {
                 floating: true
 
                 function close(): void {
-                    win.visible = false;
+                    win.destroy();
                 }
             }
 
